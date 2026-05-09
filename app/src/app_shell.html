@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Emscripten 16:9 Shell</title>
+  <style>
+    /* NEW */
+    body {
+      margin: 0;
+      background-color: #111;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      width: 100vw;
+    }
+
+    /* The "magic" container */
+    #status {
+      display: none;
+    }
+
+    .game-container {
+      /* Take up as much space as possible while staying 16:9 */
+      width: 100%;
+      height: auto;
+      max-width: calc(100vh * (16 / 9));
+
+      /* Fallback for horizontal screens */
+      aspect-ratio: 16 / 9;
+
+      position: relative;
+      background: #000;
+      display: flex;
+    }
+
+    canvas.emscripten {
+      width: 100%;
+      height: 100%;
+      border: 0;
+      display: block;
+    }
+
+    .game-container,
+    canvas.emscripten {
+      transition: none !important;
+      /* Ensure the browser doesn't try to animate the aspect-ratio change */
+      will-change: auto;
+    }
+  </style>
+</head>
+
+<body>
+
+  <div class="game-container">
+    <div id="status">Downloading...</div>
+    <canvas class="emscripten" id="canvas" oncontextmenu="event.preventDefault()" tabindex="-1"></canvas>
+  </div>
+
+  <script type='text/javascript'>
+    var statusElement = document.getElementById('status');
+    var Module = {
+      preRun: [],
+      postRun: [],
+      print: (function () {
+        return function (text) {if (arguments.length > 1) text = Array.prototype.slice.call(arguments).join(' '); console.log(text);};
+      })(),
+      canvas: (function () {
+        var canvas = document.getElementById('canvas');
+        // Necessary to prevent browser from capturing keyboard events
+        canvas.addEventListener("pointerdown", function (e) {canvas.focus();});
+        return canvas;
+      })(),
+      setStatus: function (text) {
+        if (!Module.setStatus.last) Module.setStatus.last = {time: Date.now(), text: ''};
+        if (text === Module.setStatus.last.text) return;
+        statusElement.innerHTML = text;
+        if (text) statusElement.style.display = 'none';
+        else statusElement.style.display = 'none';
+      },
+      totalDependencies: 0,
+      monitorRunDependencies: function (left) {
+        this.totalDependencies = Math.max(this.totalDependencies, left);
+        Module.setStatus(left ? 'Preparing... (' + (this.totalDependencies - left) + '/' + this.totalDependencies + ')' : 'All downloads complete.');
+      }
+    };
+    Module.setStatus('Downloading...');
+    window.onerror = function () {
+      Module.setStatus('Exception thrown, see JavaScript console');
+      Module.setStatus = function (text) {if (text) console.error('[post-exception status] ' + text);};
+    };
+  </script>
+  {{{ SCRIPT }}}
+</body>
+
+</html>

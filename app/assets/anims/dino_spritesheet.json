@@ -1,0 +1,219 @@
+{
+  "sprites": [
+    {
+      "fileName": "idle_(1).png",
+      "width": 680,
+      "height": 472,
+      "x": 0,
+      "y": 0
+    },
+    {
+      "fileName": "idle_(2).png",
+      "width": 680,
+      "height": 472,
+      "x": 680,
+      "y": 0
+    },
+    {
+      "fileName": "idle_(3).png",
+      "width": 680,
+      "height": 472,
+      "x": 1360,
+      "y": 0
+    },
+    {
+      "fileName": "idle_(4).png",
+      "width": 680,
+      "height": 472,
+      "x": 2040,
+      "y": 0
+    },
+    {
+      "fileName": "idle_(5).png",
+      "width": 680,
+      "height": 472,
+      "x": 2720,
+      "y": 0
+    },
+    {
+      "fileName": "idle_(6).png",
+      "width": 680,
+      "height": 472,
+      "x": 3400,
+      "y": 0
+    },
+    {
+      "fileName": "idle_(7).png",
+      "width": 680,
+      "height": 472,
+      "x": 0,
+      "y": 472
+    },
+    {
+      "fileName": "idle_(8).png",
+      "width": 680,
+      "height": 472,
+      "x": 680,
+      "y": 472
+    },
+    {
+      "fileName": "idle_(9).png",
+      "width": 680,
+      "height": 472,
+      "x": 1360,
+      "y": 472
+    },
+    {
+      "fileName": "idle_(10).png",
+      "width": 680,
+      "height": 472,
+      "x": 2040,
+      "y": 472
+    },
+    {
+      "fileName": "jump_(1).png",
+      "width": 680,
+      "height": 472,
+      "x": 2720,
+      "y": 472
+    },
+    {
+      "fileName": "jump_(2).png",
+      "width": 680,
+      "height": 472,
+      "x": 3400,
+      "y": 472
+    },
+    {
+      "fileName": "jump_(3).png",
+      "width": 680,
+      "height": 472,
+      "x": 0,
+      "y": 944
+    },
+    {
+      "fileName": "jump_(4).png",
+      "width": 680,
+      "height": 472,
+      "x": 680,
+      "y": 944
+    },
+    {
+      "fileName": "jump_(5).png",
+      "width": 680,
+      "height": 472,
+      "x": 1360,
+      "y": 944
+    },
+    {
+      "fileName": "jump_(6).png",
+      "width": 680,
+      "height": 472,
+      "x": 2040,
+      "y": 944
+    },
+    {
+      "fileName": "jump_(7).png",
+      "width": 680,
+      "height": 472,
+      "x": 2720,
+      "y": 944
+    },
+    {
+      "fileName": "jump_(8).png",
+      "width": 680,
+      "height": 472,
+      "x": 3400,
+      "y": 944
+    },
+    {
+      "fileName": "jump_(9).png",
+      "width": 680,
+      "height": 472,
+      "x": 0,
+      "y": 1416
+    },
+    {
+      "fileName": "jump_(10).png",
+      "width": 680,
+      "height": 472,
+      "x": 680,
+      "y": 1416
+    },
+    {
+      "fileName": "jump_(11).png",
+      "width": 680,
+      "height": 472,
+      "x": 1360,
+      "y": 1416
+    },
+    {
+      "fileName": "jump_(12).png",
+      "width": 680,
+      "height": 472,
+      "x": 2040,
+      "y": 1416
+    },
+    {
+      "fileName": "run_(1).png",
+      "width": 680,
+      "height": 472,
+      "x": 2720,
+      "y": 1416
+    },
+    {
+      "fileName": "run_(2).png",
+      "width": 680,
+      "height": 472,
+      "x": 3400,
+      "y": 1416
+    },
+    {
+      "fileName": "run_(3).png",
+      "width": 680,
+      "height": 472,
+      "x": 0,
+      "y": 1888
+    },
+    {
+      "fileName": "run_(4).png",
+      "width": 680,
+      "height": 472,
+      "x": 680,
+      "y": 1888
+    },
+    {
+      "fileName": "run_(5).png",
+      "width": 680,
+      "height": 472,
+      "x": 1360,
+      "y": 1888
+    },
+    {
+      "fileName": "run_(6).png",
+      "width": 680,
+      "height": 472,
+      "x": 2040,
+      "y": 1888
+    },
+    {
+      "fileName": "run_(7).png",
+      "width": 680,
+      "height": 472,
+      "x": 2720,
+      "y": 1888
+    },
+    {
+      "fileName": "run_(8).png",
+      "width": 680,
+      "height": 472,
+      "x": 3400,
+      "y": 1888
+    }
+  ],
+  "packMode": "grid",
+  "padding": 0,
+  "backgroundColor": "rgba(0, 0, 0, 0)",
+  "spriteSheetWidth": 4080,
+  "spriteSheetHeight": 2360
+}
