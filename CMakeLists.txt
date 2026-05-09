@@ -1,4 +1,6 @@
-project("exper-game5")
+if(NOT DEFINED PROJECT_NAME)
+  project("exper-game5")
+endif()
 
 file(
   CREATE_LINK #
